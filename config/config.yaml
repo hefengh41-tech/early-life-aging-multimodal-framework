@@ -1,1 +1,12 @@
 
+data:
+  raw_dir: data/raw/
+  processed_dir: data/processed/
+
+files:
+  beta_matrix: data/processed/beta_matrix.csv
+  ehr_data: data/raw/ehr.csv
+
+params:
+  test_size: 0.2
+  random_state: 42
