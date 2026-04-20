@@ -65,3 +65,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+["Rscript", "src/methylation/06_tiling_analysis.R"],
+
