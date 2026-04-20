@@ -3,6 +3,9 @@ from src.ehr_llm.llm_feature_extraction import extract_exposure_features
 from src.multiomics.integration import merge_modalities
 from src.modeling.train_model import train_model
 
+from src.modeling.shap_analysis import run_shap_analysis, save_shap_summary
+from src.modeling.feature_importance import get_feature_importance
+from src.modeling.ablation import run_ablation
 
 from src.methylation.preprocessing import create_sample_sheet, preview_bed_file
 from src.methylation.beta_matrix import inspect_beta_matrix
@@ -40,6 +43,17 @@ def main():
 
     # === Step 7: Train model ===
     model = train_model(merged_df, target_col="biological_age")
+
+    # === Step 8: SHAP explainability ===
+    X_sample = merged_df.drop(columns=["biological_age"]).sample(100)
+    shap_values = run_shap_analysis(model, X_sample)
+    save_shap_summary(shap_values, X_sample)
+
+    # === Step 9: Feature importance ===
+    get_feature_importance(model, X_sample.columns)
+
+    # === Step 10: Ablation study ===
+    run_ablation(merged_df, target_col="biological_age")
 
 if __name__ == "__main__":
     main()
