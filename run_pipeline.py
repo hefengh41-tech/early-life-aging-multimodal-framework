@@ -80,6 +80,9 @@ steps = [
 ["python", "src/methylation/08_beta_visualization.py"],
     ["Rscript", "src/methylation/09_chromosome_analysis.R"],
     ["Rscript", "src/methylation/10_annotation.R"],
+    ["Rscript", "src/enrichment/11_0_install_packages.R"],
+["Rscript", "src/enrichment/11_1_enrichr_analysis.R"],
+["Rscript", "src/enrichment/11_2_visualizations.R"],
 ]
 
 for step in steps:
