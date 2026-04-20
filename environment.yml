@@ -1,0 +1,19 @@
+name: methylation_env
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - python=3.10
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - r-base
+  - bioconductor-methylkit
+  - bioconductor-chipseeker
+  - bioconductor-genomicranges
+  - bioconductor-txdb.hsapiens.ucsc.hg19.knowngene
+  - r-data.table
+  - r-ggplot2
