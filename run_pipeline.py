@@ -10,6 +10,14 @@ from src.modeling.ablation import run_ablation
 from src.methylation.preprocessing import create_sample_sheet, preview_bed_file
 from src.methylation.beta_matrix import inspect_beta_matrix
 
+import yaml
+
+with open("config/config.yaml") as f:
+    config = yaml.safe_load(f)
+
+raw_dir = config["data"]["raw_dir"]
+beta_path = config["files"]["beta_matrix"]
+
 def main():
     # === Step 1: Define paths (edit these later) ===
     bed_dir = "data/raw/GSE54983_RAW"
