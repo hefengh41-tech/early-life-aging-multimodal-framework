@@ -9,3 +9,13 @@ Multimodal prediction of biological aging using DNA methylation, EHR-derived fea
 4. Machine learning prediction of biological aging
 5. SHAP-based interpretability
 6. Ablation study for modality contribution
+
+## How to Run
+
+```bash
+git clone https://github.com/your-repo.git
+cd early-life-aging-multimodal-framework
+
+pip install -r requirements.txt
+
+python run_pipeline.py
