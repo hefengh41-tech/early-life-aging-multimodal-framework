@@ -76,6 +76,8 @@ steps = [
     ["Rscript", "src/methylation/04_filter_unite.R"],
     ["Rscript", "src/methylation/05_differential_analysis.R"],
     ["Rscript", "src/methylation/07_visualization.R"],
+    ["Rscript", "src/methylation/08_beta_matrix.R"],
+["python", "src/methylation/08_beta_visualization.py"],
 ]
 
 for step in steps:
