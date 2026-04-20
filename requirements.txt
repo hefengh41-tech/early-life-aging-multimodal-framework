@@ -6,3 +6,10 @@ seaborn
 scikit-learn
 statsmodels
 shap
+numpy
+pandas
+scikit-learn
+tensorflow
+shap
+matplotlib
+seaborn
