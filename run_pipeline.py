@@ -83,6 +83,10 @@ steps = [
     ["Rscript", "src/enrichment/11_0_install_packages.R"],
 ["Rscript", "src/enrichment/11_1_enrichr_analysis.R"],
 ["Rscript", "src/enrichment/11_2_visualizations.R"],
+    ["python", "src/shap_full/13_1_data_diagnostics.py"],
+["python", "src/shap_full/13_1b_shap_surrogate.py"],
+["Rscript", "src/shap_full/13_2a_extract_gene_names.R"],
+["python", "src/shap_full/13_2_projection.py"],
 ]
 
 for step in steps:
