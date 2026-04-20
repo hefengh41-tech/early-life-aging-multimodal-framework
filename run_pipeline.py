@@ -67,6 +67,18 @@ if __name__ == "__main__":
     main()
 
 
+import subprocess
 
+steps = [
+    ["bash", "src/methylation/01_extract_data.sh"],
+    ["python", "src/methylation/02_create_sample_sheet.py"],
+    ["Rscript", "src/methylation/03_load_methylation.R"],
+    ["Rscript", "src/methylation/04_filter_unite.R"],
+    ["Rscript", "src/methylation/05_differential_analysis.R"],
+]
+
+for step in steps:
+    print(f"Running: {step}")
+    subprocess.run(step, check=True)
 ["Rscript", "src/methylation/06_tiling_analysis.R"],
 
